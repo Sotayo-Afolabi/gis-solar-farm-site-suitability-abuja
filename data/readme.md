@@ -3,8 +3,8 @@
 This directory contains the metadata and source descriptions for all spatial vector and raster datasets utilized in the Abuja Solar Farm Site Suitability Analysis.
 
 ## Coordinate Reference System (CRS)
-* **Projected CRS:** UTM Zone 32N[cite: 14, 15]
-* **EPSG Code:** `EPSG:32632`[cite: 14, 15]
+* **Projected CRS:** UTM Zone 32N
+* **EPSG Code:** `EPSG:32632`
 * **Geographic Datum:** WGS 84
 
 ---
