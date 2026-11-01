@@ -20,6 +20,17 @@ This directory contains the metadata and source descriptions for all spatial vec
 | **ESA WorldCover LULC** | Raster | ESA WorldCover Dataset | Global land use land cover dataset at 10m/30m resolution. Used to create the binary constraint mask. |
 
 ---
+## NDVI Calculation & Mathematical Formula
+
+The Normalized Difference Vegetation Index (NDVI) was computed from satellite imagery to evaluate vegetation density and sparse land cover:
+
+$$\text{NDVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}}$$
+
+* **NIR (Near-Infrared Band):** Sentinel-2 Band 8 / Landsat-8 Band 5 (strongly reflected by plant cellular structure).
+* **Red Band:** Sentinel-2 Band 4 / Landsat-8 Band 4 (absorbed by chlorophyll pigments).
+* **Threshold Context:** Values ranging from **0.0 to 0.2** represented bare soil, rock, and urban built-up surfaces (such as concrete and rooftops), which required cross-referencing with the ESA WorldCover mask to prevent false classification[cite: 12].
+
+---
 
 ## Pre-Processing & Standardization Workflow
 1. **Projection Alignment:** All raw vector and raster layers were reprojected to `EPSG:32632 (UTM Zone 32N)` to ensure uniform metric distance calculations.
